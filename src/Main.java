@@ -65,6 +65,25 @@ public class Main {
                 case 3:
                     System.out.println("Su total actual es de $" + subtotal);
                     break;
+
+                case 4:
+                    System.out.println(" Checkout iniciado");
+                     String[] pasos = {
+                         "1) Validacion de stock",
+                         "2) Confirmacion de datos",
+                         "3) Procesamiento de pago",
+                         "4) Generacion de envio",
+                             "Compra realizada con éxito!"
+
+                };
+                    for (int i = 0; i < pasos.length; i++) {
+                    System.out.println(pasos[i]);
+                }
+                    break;
+                case 5:
+                    System.out.println("Gracias por comprar en 404store");
+                    m=1;
+                    break;
             }
         }while(m==0);
 
