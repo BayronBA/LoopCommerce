@@ -25,13 +25,13 @@ public class Main {
             System.out.println("5) Salir");
             System.out.print("Elige una opción: ");
             int opcion = sc.nextInt();
-            switch(opcion){
+            switch(opcion) {
                 case 1:
 
                     int index = 0;
-                    for(String prod : productos){
+                    for (String prod : productos) {
 
-                        System.out.println(index+1+") "+prod+" $"+precios[index]);
+                        System.out.println(index + 1 + ") " + prod + " $" + precios[index]);
                         index++;
                     }
 
@@ -43,7 +43,7 @@ public class Main {
                         System.out.println("\nIngrese el numero del producto que desea agregar: ");
                         int inde = 0;
                         for (String prod : productos) {
-                            System.out.println(inde+1+") "+prod+" $"+precios[inde]);
+                            System.out.println(inde + 1 + ") " + prod + " $" + precios[inde]);
                             inde++;
                         }
                         System.out.println("\n0)Salir: ");
@@ -55,16 +55,17 @@ public class Main {
                             subtotal += precios[seleccion];
                             System.out.println(productos[seleccion] + "se agrego al carrito");
 
-                        }
-                        else if (seleccion != 0){
+                        } else if (seleccion != 0) {
                             System.out.println("Seleccion invalida");
-                            }
+                        }
 
 
-                        } while (seleccion != 0);
-                    }
+                    } while (seleccion != 0);
 
-
+                case 3:
+                    System.out.println("Su total actual es de $" + subtotal);
+                    break;
+            }
         }while(m==0);
 
     }
