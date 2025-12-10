@@ -8,6 +8,9 @@ public class Main {
         int [] precios = {
                 2000, 3500, 1200, 2500, 3200, 3300, 1000, 1100
         };
+
+        int subtotal = 0;
+
         Scanner sc = new Scanner(System.in);
         int m = 0;
         do{
@@ -33,7 +36,34 @@ public class Main {
                     }
 
                     break;
-            }
+
+                case 2:
+                    int seleccion;
+                    do {
+                        System.out.println("\nIngrese el numero del producto que desea agregar: ");
+                        int inde = 0;
+                        for (String prod : productos) {
+                            System.out.println(inde+1+") "+prod+" $"+precios[inde]);
+                            inde++;
+                        }
+                        System.out.println("\n0)Salir: ");
+
+                        System.out.println("Su seleccion:");
+                        seleccion = sc.nextInt();
+
+                        if (seleccion > 0 && seleccion < productos.length) {
+                            subtotal += precios[seleccion];
+                            System.out.println(productos[seleccion] + "se agrego al carrito");
+
+                        }
+                        else if (seleccion != 0){
+                            System.out.println("Seleccion invalida");
+                            }
+
+
+                        } while (seleccion != 0);
+                    }
+
 
         }while(m==0);
 
